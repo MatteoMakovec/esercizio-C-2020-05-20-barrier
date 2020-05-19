@@ -22,6 +22,7 @@ sem_t mutex;
 int number_of_threads = N;
 int count;
 
+#define CHECK_ERR(a,msg) {if ((a) == -1) { perror((msg)); exit(EXIT_FAILURE); } }
 
 void * thread_function(void * arg) {
 	int s;
@@ -48,12 +49,7 @@ void * thread_function(void * arg) {
 }
 
 
-
-
-#define CHECK_ERR(a,msg) {if ((a) == -1) { perror((msg)); exit(EXIT_FAILURE); } }
-
 int main() {
-
 	int s;
 	pthread_t threads[N];
 
