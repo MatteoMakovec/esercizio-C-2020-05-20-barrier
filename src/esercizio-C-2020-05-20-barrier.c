@@ -9,7 +9,7 @@
 int main() {
 
 	int i = 0;
-
+	int l = 1;
 
 	return 0;
 }
