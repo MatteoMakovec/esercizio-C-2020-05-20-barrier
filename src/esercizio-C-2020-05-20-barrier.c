@@ -27,6 +27,7 @@ void * thread_function(void * arg) {
 	int s;
 
 	printf("rendezvous\n");
+
 	if (sem_wait(&mutex) == -1) {
 		perror("sem_wait");
 		exit(EXIT_FAILURE);
